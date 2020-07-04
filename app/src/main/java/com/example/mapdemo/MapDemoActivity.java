@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.location.Location;
 import android.os.Bundle;
 import android.os.Looper;
+import android.os.SystemClock;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -160,6 +161,15 @@ public class MapDemoActivity extends AppCompatActivity implements GoogleMap.OnMa
                 });
 
         alertDialog.show();
+
+    }
+
+    private  void dropPinEffect(final Marker marker){
+        //Handler allow us to repeat a code of block after specified delay
+
+        final android.os.Handler handler = new android.os.Handler();
+        final long start  = SystemClock.uptimeMillis();
+        final long duration = 1500;
 
     }
 
