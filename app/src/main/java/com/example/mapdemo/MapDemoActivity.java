@@ -100,7 +100,7 @@ public class MapDemoActivity extends AppCompatActivity implements GoogleMap.OnMa
 
     @Override
     public void onMapLongClick(final LatLng point){
-        Toast.makeText(this, "Long press", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Long press", Toast.LENGTH_LONG).show();
     }
 
     @Override
