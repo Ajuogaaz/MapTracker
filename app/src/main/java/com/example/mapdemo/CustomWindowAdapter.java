@@ -7,10 +7,10 @@ import android.widget.TextView;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.Marker;
 
-class CustomWindowAdpater implements GoogleMap.InfoWindowAdapter {
+class CustomWindowAdapter implements GoogleMap.InfoWindowAdapter {
     LayoutInflater mInflater;
 
-    public CustomWindowAdpater(LayoutInflater mInflater) {
+    public CustomWindowAdapter(LayoutInflater mInflater) {
         this.mInflater = mInflater;
     }
 
