@@ -159,6 +159,8 @@ public class MapDemoActivity extends AppCompatActivity implements GoogleMap.OnMa
                     }
                 });
 
+        alertDialog.show();
+
     }
 
     @Override
