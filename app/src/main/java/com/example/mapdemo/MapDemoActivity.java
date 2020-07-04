@@ -35,6 +35,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 
@@ -138,6 +139,8 @@ public class MapDemoActivity extends AppCompatActivity implements GoogleMap.OnMa
                         String Title = ((EditText)alertDialog.findViewById(R.id.eTitle)).getText().toString();
 
                         String Snippet = ((EditText) alertDialog.findViewById(R.id.etSnippet)).getText().toString();
+
+                        Marker marker
                     }
                 });
 
