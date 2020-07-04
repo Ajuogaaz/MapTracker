@@ -1,12 +1,15 @@
 package com.example.mapdemo;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.location.Location;
 import android.os.Bundle;
 import android.os.Looper;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Toast;
 
@@ -109,8 +112,24 @@ public class MapDemoActivity extends AppCompatActivity implements GoogleMap.OnMa
     private void showAlertDialogForPoint(LatLng point) {
 
         //Inflate message_item.xml view
-        View messageview
+        View messageView = LayoutInflater.from(MapDemoActivity.this).inflate(R.layout.message_item, null);
 
+        //Create alert dialog builder
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        // set message_item.xml to alert Dialog Builder
+        alertDialogBuilder.setView(messageView);
+
+        //Create alert Dialog
+        final AlertDialog alertDialog = alertDialogBuilder.create();
+
+        //Configure dialog button (OK)
+        alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "OK",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
 
     }
 
