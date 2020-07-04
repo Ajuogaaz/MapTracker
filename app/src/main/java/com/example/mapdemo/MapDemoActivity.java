@@ -149,6 +149,8 @@ public class MapDemoActivity extends AppCompatActivity implements GoogleMap.OnMa
                         .title(Title)
                         .snippet(Snippet)
                         .icon(defaultMarker));
+
+                        dropPinEffect(marker);
                     }
                 });
 
