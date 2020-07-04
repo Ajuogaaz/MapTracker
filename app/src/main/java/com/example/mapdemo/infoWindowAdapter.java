@@ -22,10 +22,16 @@ class CustomWindowAdpater implements GoogleMap.InfoWindowAdapter {
         View view = mInflater.inflate(R.layout.custom_info_window, null);
 
         //populate fields
-        TextView title = view.findViewById(R.id.tv_info_window_description);
+        TextView title = view.findViewById(R.id.tv_info_window_title);
+        title.setText(marker.getTitle());
+
+        TextView description = view.findViewById(R.id.tv_info_window_description);
+        description.setText(marker.getSnippet());
+
+        //Return info window contents
+        return view;
 
 
-        return null;
     }
 
     @Override
