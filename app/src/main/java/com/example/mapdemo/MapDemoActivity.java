@@ -12,6 +12,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.animation.BounceInterpolator;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -170,6 +171,10 @@ public class MapDemoActivity extends AppCompatActivity implements GoogleMap.OnMa
         final android.os.Handler handler = new android.os.Handler();
         final long start  = SystemClock.uptimeMillis();
         final long duration = 1500;
+
+        //Use the bounce Interpolator
+        final android.view.animation.Interpolator interpolator =
+                new BounceInterpolator();
 
     }
 
