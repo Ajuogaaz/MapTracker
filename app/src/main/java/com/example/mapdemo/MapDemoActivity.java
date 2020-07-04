@@ -185,7 +185,10 @@ public class MapDemoActivity extends AppCompatActivity implements GoogleMap.OnMa
 
                 //Calculate t for bounce based on elapsed time
                 float t = Math.max(
-                        1 - interpolator.getInterpolation((float) elapsed / duration), 0)
+                        1 - interpolator.getInterpolation((float) elapsed / duration), 0);
+
+                //Set the anchor
+                marker.setAnchor(0.5f, 1.0f + 14 * t);
             }
         })
 
