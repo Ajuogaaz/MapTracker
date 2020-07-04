@@ -91,7 +91,7 @@ public class MapDemoActivity extends AppCompatActivity {
             MapDemoActivityPermissionsDispatcher.getMyLocationWithPermissionCheck(this);
             MapDemoActivityPermissionsDispatcher.startLocationUpdatesWithPermissionCheck(this);
 
-            map.setOnMapLongClickListener(this);
+            map.setOnMapLongClickListener((GoogleMap.OnMapLongClickListener) this);
 
         } else {
             Toast.makeText(this, "Error - Map was null!!", Toast.LENGTH_SHORT).show();
