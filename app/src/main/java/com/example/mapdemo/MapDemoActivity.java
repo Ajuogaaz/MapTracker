@@ -150,6 +150,15 @@ public class MapDemoActivity extends AppCompatActivity implements GoogleMap.OnMa
                     }
                 });
 
+        //Configure the dialog button
+        alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+
     }
 
     @Override
