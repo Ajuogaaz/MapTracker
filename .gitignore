@@ -21,6 +21,9 @@ local.properties
 .classpath
 .project
 
+#API keys
+./app/src/main/res/values/CONFIG.xml
+
 # Android Studio project files
 *.iml
 .gradle
