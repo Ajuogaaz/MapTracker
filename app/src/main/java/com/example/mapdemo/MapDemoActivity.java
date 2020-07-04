@@ -36,6 +36,7 @@ import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 
@@ -113,7 +114,7 @@ public class MapDemoActivity extends AppCompatActivity implements GoogleMap.OnMa
         showAlertDialogForPoint(point);
     }
     //Displays the message that adds the marker
-    private void showAlertDialogForPoint(LatLng point) {
+    private void showAlertDialogForPoint(final LatLng point) {
 
         //Inflate message_item.xml view
         View messageView = LayoutInflater.from(MapDemoActivity.this).inflate(R.layout.message_item, null);
@@ -140,7 +141,12 @@ public class MapDemoActivity extends AppCompatActivity implements GoogleMap.OnMa
 
                         String Snippet = ((EditText) alertDialog.findViewById(R.id.etSnippet)).getText().toString();
 
-                        Marker marker
+                        // Creates and adds marker to the map
+                        Marker marker = map.addMarker(new MarkerOptions()
+                        .position(point)
+                        .title(Title)
+                        .snippet(Snippet)
+                        .icon(defaultMarker));
                     }
                 });
 
