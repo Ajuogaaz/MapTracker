@@ -181,6 +181,7 @@ public class MapDemoActivity extends AppCompatActivity implements GoogleMap.OnMa
             @Override
             public void run() {
 
+                long elapsed = SystemClock.uptimeMillis() - start;
             }
         })
 
