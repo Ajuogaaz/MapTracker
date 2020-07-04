@@ -11,6 +11,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -133,6 +134,10 @@ public class MapDemoActivity extends AppCompatActivity implements GoogleMap.OnMa
                         BitmapDescriptor defaultMarker =
                                 BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN);
 
+                        //Extract Content from alert dialog
+                        String Title = ((EditText)alertDialog.findViewById(R.id.eTitle)).getText().toString();
+
+                        String Snippet = ((EditText) alertDialog.findViewById(R.id.etSnippet)).getText().toString();
                     }
                 });
 
