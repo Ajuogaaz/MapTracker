@@ -189,8 +189,17 @@ public class MapDemoActivity extends AppCompatActivity implements GoogleMap.OnMa
 
                 //Set the anchor
                 marker.setAnchor(0.5f, 1.0f + 14 * t);
+
+                if(t > 0.0){
+                    //post this event again 15ms from now
+                    handler.postDelayed(this, 15);
+
+                }else{
+                    //done elepsing the window
+                    marker.showInfoWindow();
+                }
             }
-        })
+        });
 
     }
 
