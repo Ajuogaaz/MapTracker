@@ -182,6 +182,10 @@ public class MapDemoActivity extends AppCompatActivity implements GoogleMap.OnMa
             public void run() {
 
                 long elapsed = SystemClock.uptimeMillis() - start;
+
+                //Calculate t for bounce based on elapsed time
+                float t = Math.max(
+                        1 - interpolator.getInterpolation((float) elapsed / duration), 0)
             }
         })
 
