@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Looper;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -101,6 +102,16 @@ public class MapDemoActivity extends AppCompatActivity implements GoogleMap.OnMa
     @Override
     public void onMapLongClick(final LatLng point){
         Toast.makeText(this, "Long press", Toast.LENGTH_LONG).show();
+
+        showAlertDialogForPoint(point);
+    }
+    //Displays the message that adds the marker
+    private void showAlertDialogForPoint(LatLng point) {
+
+        //Inflate message_item.xml view
+        View messageview
+
+
     }
 
     @Override
