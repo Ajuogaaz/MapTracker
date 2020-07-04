@@ -33,7 +33,8 @@ class CustomWindowAdpater implements GoogleMap.InfoWindowAdapter {
 
 
     }
-
+    // This changes the frame of the info window; returning null and uses the default frame
+    //This is just the border and arrow surrounding the contents specified above
     @Override
     public View getInfoContents(Marker marker) {
         return null;
