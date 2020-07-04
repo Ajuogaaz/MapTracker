@@ -176,6 +176,14 @@ public class MapDemoActivity extends AppCompatActivity implements GoogleMap.OnMa
         final android.view.animation.Interpolator interpolator =
                 new BounceInterpolator();
 
+        //Animate marker with a bounce updating its position every 15ms
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+
+            }
+        })
+
     }
 
     @Override
