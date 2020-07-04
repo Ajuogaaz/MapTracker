@@ -88,10 +88,11 @@ public class MapDemoActivity extends AppCompatActivity implements GoogleMap.OnMa
                     loadMap(map);
                 }
             });
-            map.setInfoWindowAdapter(new CustomWindowAdapter(getLayoutInflater()));
+
         } else {
             Toast.makeText(this, "Error - Map Fragment was null!!", Toast.LENGTH_SHORT).show();
         }
+        map.setInfoWindowAdapter(new CustomWindowAdapter(getLayoutInflater()));
 
     }
 
