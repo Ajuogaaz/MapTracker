@@ -37,7 +37,7 @@ import permissions.dispatcher.RuntimePermissions;
 import static com.google.android.gms.location.LocationServices.getFusedLocationProviderClient;
 
 @RuntimePermissions
-public class MapDemoActivity extends AppCompatActivity {
+public class MapDemoActivity extends AppCompatActivity implements  {
 
     private SupportMapFragment mapFragment;
     private GoogleMap map;
@@ -91,11 +91,16 @@ public class MapDemoActivity extends AppCompatActivity {
             MapDemoActivityPermissionsDispatcher.getMyLocationWithPermissionCheck(this);
             MapDemoActivityPermissionsDispatcher.startLocationUpdatesWithPermissionCheck(this);
 
-            map.setOnMapLongClickListener((GoogleMap.OnMapLongClickListener) this);
+            map.setOnMapLongClickListener(this);
 
         } else {
             Toast.makeText(this, "Error - Map was null!!", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @Override
+    public void onMapLongClick(final LatLng point){
+        Toast.makeText(this, "Long press", Toast.LENGTH_SHORT).show();
     }
 
     @Override
